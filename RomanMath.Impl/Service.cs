@@ -45,7 +45,7 @@ namespace RomanMath.Impl
 		public static int Evaluate(string expression)
 		{
 			if (String.IsNullOrEmpty(expression))
-				throw new ArgumentNullException();
+				throw new ArgumentNullException("Expression is null or empty");
 
 			expression = Regex.Replace(expression, @"[\s]", "");
 			var match = Regex.Match(expression, pattern, RegexOptions.Singleline);
